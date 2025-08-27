@@ -1,24 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+   
+         
+          <link rel="icon" type="image/png" href="/logo/egret other-04.png"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VentureFlow Pro - Business Listing Platform</title>
-    <meta name="description" content="Create stunning business listings, manage multiple categories, and grow your business with VentureFlow Pro - the comprehensive platform for modern enterprises." />
-    <meta name="author" content="VentureFlow Pro" />
-
-    <meta property="og:title" content="VentureFlow Pro - Business Listing Platform" />
-    <meta property="og:description" content="Create stunning business listings, manage multiple categories, and grow your business with VentureFlow Pro." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <title>Egret</title>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(
+            function(registration) {
+              console.log('ServiceWorker registration successful');
+            },
+            function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            }
+          );
+        });
+      }
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
   </body>
 </html>

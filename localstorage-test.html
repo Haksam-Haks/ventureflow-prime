@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage Test</title>
+</head>
+<body>
+  <h1>LocalStorage Test</h1>
+  <button id="set">Set Test Value</button>
+  <button id="get">Get Test Value</button>
+  <button id="clear">Clear LocalStorage</button>
+  <pre id="output"></pre>
+  <script>
+    const output = document.getElementById('output');
+    document.getElementById('set').onclick = () => {
+      localStorage.setItem('testKey', 'testValue');
+      output.textContent = 'Set testKey to testValue';
+    };
+    document.getElementById('get').onclick = () => {
+      const value = localStorage.getItem('testKey');
+      output.textContent = 'testKey: ' + value;
+    };
+    document.getElementById('clear').onclick = () => {
+      localStorage.clear();
+      output.textContent = 'LocalStorage cleared';
+    };
+  </script>
+</body>
+</html>
