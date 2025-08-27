@@ -1,7 +1,3 @@
-  // Handler to go back from property details view
-  const handleBackFromDetails = () => {
-;
-  };
 import React, { useState, useEffect, useRef } from 'react';
 import { FaTrashAlt, FaHome, FaEye, FaPhoneAlt, FaEnvelope, FaUserCircle } from 'react-icons/fa';
 import { Star, MapPin, Search, Wifi, Coffee, Loader2, Filter, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -114,7 +110,7 @@ const HotelsPage: React.FC = () => {
           setFilteredProperties(mappedProperties);
           const types = [...new Set(mappedProperties.map((p: Property) => p.roomType))];
           setPropertyTypes(['all', ...types.filter((type): type is string => typeof type === 'string')]);
-          toast({ title: "Properties Loaded", description: "Properties loaded successfully.", variant: "success" });
+          toast({ title: "Properties Loaded", description: "Properties loaded successfully." });
         } else {
           throw new Error(response?.message || 'Invalid response format');
         }
@@ -319,6 +315,10 @@ const HotelsPage: React.FC = () => {
 
   const handleViewProperty = (propertyId: number) => {
     setSelectedPropertyId(propertyId);
+  };
+
+  const handleBackFromDetails = () => {
+    setSelectedPropertyId(null);
   };
 
 

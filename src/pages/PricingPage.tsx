@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 interface PricingPageProps {
   disabled?: boolean;
@@ -31,7 +30,7 @@ const PAYMENT_METHODS = [
   { id: 'bank_transfer', label: 'Bank Transfer' },
 ];
 
-const PricingPage: React.FC<PricingPageProps> = ({ disabled, hideSubmitButton }) => {
+const PricingPage: React.FC<PricingPageProps> = ({ hideSubmitButton }) => {
   const [selectedPackage, setSelectedPackage] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('');
   const [paymentDetails, setPaymentDetails] = useState('');

@@ -284,19 +284,15 @@ const BankStep: React.FC<BankStepProps> = ({ bankAccounts, onChange, errors = {}
                   value={account.accountNumber}
                   onChange={e => {
                     let value = e.target.value;
-                    let placeholder = '';
                     switch (accountNumberTypes[idx]) {
                       case "IBAN":
                         value = value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-                        placeholder = 'e.g., UG12BANK12345678901234';
                         break;
                       case "SWIFT/BIC":
                         value = value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-                        placeholder = 'e.g., ABCLUGKA or ABCLUGKA123';
                         break;
                       default:
                         value = value.replace(/\D/g, '');
-                        placeholder = 'e.g., 123456789012';
                     }
                     handleAccountChange(idx, 'accountNumber', value);
                   }}

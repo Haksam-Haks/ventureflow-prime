@@ -210,7 +210,6 @@ const ALL_COUNTRIES: Country[] = [
 export function useCountriesAndCities() {
   const [countries, setCountries] = useState<Country[]>(ALL_COUNTRIES);
   const [cities, setCities] = useState<City[]>([]);
-  const [loadingCountries, setLoadingCountries] = useState(false);
   const [loadingCities, setLoadingCities] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -220,7 +219,7 @@ export function useCountriesAndCities() {
   }, []);
 
   // Fetch cities for a given country code - can be implemented or left empty
-  const fetchCities = async (countryCode: string) => {
+  const fetchCities = async (_code: string) => {
     setLoadingCities(true);
     setCities([]);
     setError(null);
@@ -231,7 +230,6 @@ export function useCountriesAndCities() {
   return {
     countries,
     cities,
-    loadingCountries,
     loadingCities,
     error,
     fetchCities

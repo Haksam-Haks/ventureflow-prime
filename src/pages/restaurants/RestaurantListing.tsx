@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, MapPin, Search, Utensils, Coffee, UserCircle } from 'lucide-react';
+import { Star, MapPin, Search, Utensils } from 'lucide-react';
 
 const RestaurantListing: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

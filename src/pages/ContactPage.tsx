@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { toast, Toaster } from 'react-hot-toast';
 
 const ContactPage: React.FC = () => {

@@ -47,7 +47,7 @@ const AddressStep: React.FC<ControlledAddressStepProps> = ({ values, onChange, e
         setError(null);
 
         const { sendGetToServer } = apiService();
-        const response = await sendGetToServer('address/getaddress', { id: undefined }) as {
+        const response = await sendGetToServer('address/getaddress') as {
           regions: any[];
           districts: any[];
           counties: any[];

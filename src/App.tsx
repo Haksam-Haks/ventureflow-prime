@@ -164,18 +164,10 @@ function App() {
     <div className="min-h-screen w-full overflow-x-hidden bg-white">
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary>
-          <AuthProvider>
-            <UserProvider>
-              <BusinessProvider>
-                <TooltipProvider>
-                  <Router>
-                    <AppRoutes />
-                  </Router>
-                  <Toaster position="top-center" reverseOrder={false} />
-                </TooltipProvider>
-              </BusinessProvider>
-            </UserProvider>
-          </AuthProvider>
+          <Router>
+            <AppRoutes />
+          </Router>
+          <Toaster position="top-center" reverseOrder={false} />
         </ErrorBoundary>
       </QueryClientProvider>
     </div>

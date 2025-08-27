@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
-import { Link } from 'react-router-dom';  // Pages where footer should be hidden
+import { Facebook, Twitter, Instagram } from 'lucide-react';
 
 
 const Footer: React.FC = () => {

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Star, MapPin, Clock, Utensils, Coffee, Menu, Users, Calendar } from 'lucide-react';
+import { Star, MapPin, Clock, Utensils, Menu, Users, Coffee } from 'lucide-react';
 
 // Mock restaurant data - in a real app, this would come from an API
 const restaurantsData = [

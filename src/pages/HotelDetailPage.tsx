@@ -50,7 +50,7 @@ const PropertyDetailPage: React.FC = () => {
     const fetchPropertyDetails = async () => {
       try {
         setLoading(true);
-        const response: ApiResponse = await apiService().sendGetToServer(`/properties/${id}`, { id });
+        const response: ApiResponse = await apiService().sendGetToServer(`/properties/${id}`);
         
         if (response?.returnObject) {
           setProperty(response.returnObject);
